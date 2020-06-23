@@ -83,10 +83,12 @@ df['2017']
 df['2016-12']
 
 # %%
-# Showing the data that from 12/2016
+# Showing the data that from December 2016 onwards
 df['2016-12':]
 
-# %%
+# %% Changing frequency  from bi-weekly to weekly
+# it will end up with missing values every other week.
+# In order to don't have NaN, we use forward fill method on those missing values
 df.asfreq('W', method='ffill')
 
 
